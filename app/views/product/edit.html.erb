@@ -1,0 +1,13 @@
+<h1>Editing Product</h1>
+<p>Find me in app/views/product/edit.html.erb</p>
+
+<form action='/product/<%= @product.id %>' method='post'>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+		<input type="hidden" name="_method" value="put">
+	Name: <input type='text' name='product[name]'><br>
+	Description: <input type='text' name='product[description]'><br>
+	Price: <input type='text' name='product[pricing]'><br>
+	<input type='submit' value='Update!'>
+</form>
+
+<a href="/product/<%= @product.id %>">Show </a>  |  <a href="/product/index">Back</a>

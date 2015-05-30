@@ -1,0 +1,10 @@
+<h1>Product#new</h1>
+<p>Find me in app/views/product/new.html.erb</p>
+
+<form action='/product/create' method='post'>
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	Name: <input type='text' name='product[name]'><br>
+	Description: <input type='text' name='product[description]'><br>
+	Price: <input type='text' name='product[pricing]'><br>
+	<input type='submit' value='Create!'>
+</form>
